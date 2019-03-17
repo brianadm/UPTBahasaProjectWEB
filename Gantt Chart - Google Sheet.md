@@ -1,4 +1,4 @@
-##Link Google Sheet GanttChart## 
+# Link Google Sheet GanttChart## 
 
 untuk dapat mengaksesnya, gunakan account dari Kampus ITERA yaitu berdonau itera.ac.id
 
