@@ -9,12 +9,16 @@
 
     <section class="content">
         <div class="row">
+          <?php
+          if($role == ROLE_MAHASISWA)
+          {
+          ?>
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
               <div class="small-box bg-aqua">
                 <div class="inner">
                   <h3>Upload</h3>
-                  <p>Bukti Pembayaran</p>
+                  <p>Proof of Payment</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-upload"></i>
@@ -26,8 +30,8 @@
               <!-- small box -->
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3>Lihat<sup style="font-size: 20px"></sup></h3>
-                  <p>Nomor Pendaftaran</p>
+                  <h3>Check<sup style="font-size: 20px"></sup></h3>
+                  <p>Registrarion Number</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-leaf"></i>
@@ -35,16 +39,37 @@
                 <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
+
+                        <div class="col-lg-3 col-xs-6">
+                          <!-- small box -->
+                          <div class="small-box bg-red">
+                            <div class="inner">
+                              <h3>Download</h3>
+                              <p>Certificate</p>
+                            </div>
+                            <div class="icon">
+                              <i class="ion ion-document"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                          </div>
+                        </div><!-- ./col -->
+
             <?php
-            if($role == ROLE_ADMIN || $role == ROLE_MANAGER)
+            }
+            ?>
+
+
+
+            <?php
+            if($role == ROLE_ADMIN)
             {
             ?>
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
               <div class="small-box bg-yellow">
                 <div class="inner">
-                  <h3>Daftarkan</h3>
-                  <p>New User</p>
+                  <h3>User</h3>
+                  <p>to Manage User</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
@@ -52,22 +77,38 @@
                 <a href="<?php echo base_url(); ?>userListing" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
-            <?php
-            }
-            ?>
+
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-purple">
+                <div class="inner">
+                  <h3>Confirm</h3>
+                  <p>to Confirm Payment</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-checkmark"></i>
+                </div>
+                <a href="<?php echo base_url(); ?>userListing" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div><!-- ./col -->
+
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
               <div class="small-box bg-red">
                 <div class="inner">
-                  <h3>Cek</h3>
-                  <p>Sertifikat</p>
+                  <h3>Upload</h3>
+                  <p>to Upload Certificate</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-document"></i>
+                  <i class="ion ion-upload"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?php echo base_url(); ?>userListing" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
+            <?php
+            }
+            ?>
+
           </div>
     </section>
 </div>
